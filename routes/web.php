@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('cars', [App\Http\Controllers\CarController::class, 'index'])->name('cars.index');
+Route::get('cars/{car}', [App\Http\Controllers\CarController::class, 'show'])->name('cars.show');
+Route::get('account', [App\Http\Controllers\AccountController::class, 'index'])->name('account');
+
+
+Auth::routes();

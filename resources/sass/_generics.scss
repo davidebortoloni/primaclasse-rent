@@ -1,0 +1,29 @@
+header nav {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+header img {
+    height: 40px;
+}
+
+header {
+    z-index: 100;
+}
+
+.p-top {
+    padding-top: 120px;
+}
+
+.main {
+    min-height: calc(100vh - 157.83px);
+}
+
+.text-small {
+    font-size: 11px;
+}
+
+.square:before {
+    content: "";
+    display: block;
+    padding-top: 100%; /* initial ratio of 1:1*/
+}
